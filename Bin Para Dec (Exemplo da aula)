@@ -1,0 +1,7 @@
+def binToDec(binaryString):
+   sum=0
+   base=1
+   for i in reversed(str(binaryString)):
+      sum = sum + (base * int(i))
+      base = base * 2
+   print(sum)
