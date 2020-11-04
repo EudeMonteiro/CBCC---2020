@@ -1,0 +1,29 @@
+def binParaDec(bin):
+	dec = 0
+	expoente = 0
+	while bin > 0: 
+		dec = dec + 2 ** expoente * (bin % 10) 
+		bin //= 10 	
+		expoente += 1
+	return dec
+  
+def ChecagemBinario(ins): 
+    x = '01'
+    indicador = 0
+    for digito in str(ins) : 
+        if digito not in x : 
+            indicador = 1
+            break
+        else : 
+            pass
+    if indicador != 0:  
+        print("O número inserido não é binário")
+    else : 
+      print(binParaDec(ins))
+
+lista=[11010101, 10100000, 11000111, 10100111, 11011111, 10111101, 
+       1110000, 10001110, 1101110, 11110000, 11001000, 10000011, 1, 
+       10000010, 11101110, 10101010, 1100011, 11100, 110001, 11100011, 
+       11011000, 10010000, 1010100, 11101011]
+for i in range(len(lista)):
+  print(binParaDec(lista[i]), end=" ")
