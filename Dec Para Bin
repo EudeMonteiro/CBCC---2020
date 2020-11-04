@@ -1,0 +1,9 @@
+def DecParaBin(dec):  
+  
+    if(dec > 1):  
+      DecParaBin(dec//2)  
+  
+    print(dec%2, end='')
+
+dec=int(input("Insira o número: "))
+DecParaBin(dec)
